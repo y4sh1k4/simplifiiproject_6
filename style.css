@@ -1,0 +1,61 @@
+body{
+    background: url("https://m.media-amazon.com/images/I/81AW2VKVSbL._AC_SL1500_.jpg");
+    display:flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box{
+    /* background-color: white;
+    border:black solid 10px;
+    position :relative;
+    width:50vw;
+    height:auto;    
+    box-shadow:0px 0px 15px black;
+    border-radius:8px; */
+}
+
+.container img{
+    width: 15vw;
+    height:25vh;
+    margin-left: 60px;
+}
+
+.container{
+    background-color: white;
+    border:black solid 10px;
+    /* position:absolute; */
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    width: 50vw;
+    flex-direction: column;
+    box-shadow:0px 0px 15px black;
+    border-radius:8px;
+}
+
+.container .btn{
+    /* position: absolute;
+    left:38%;
+    top:75%; */
+    padding: 10px 20px;
+    background: red;
+    outline: none;
+    border:none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+}
+
+.container h1{
+    font-family: 'Dancing Script', cursive;
+}
+
+.container h3{
+    margin: 10px;
+}

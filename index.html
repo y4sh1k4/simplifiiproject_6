@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SimplifiProject6</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="box">
+
+        </div>
+        <div class="container">
+            <img src="https://media.tenor.com/cR8ujewMmSgAAAAC/question-lignon.gif" alt="person guessing with question mark">
+            <h1>Guess the number game</h1>
+            <button onclick="guessTheNum()" class="btn">Click Me</button>   
+            <h3 id="#"></h3>
+            <h3 id="#2"></h3>
+            </div>
+            <script>
+                function guessTheNum() {
+                    var x = prompt("Enter Any Number between 1 and 100");
+                    if ((x < 1) || (x > 100) || typeof(x)!="number") {
+                        alert("Invalid input. Enter number between 1 and 100");
+                        return;
+                    }
+                    count = 0;
+                    cond = false;
+                    while (count < 5) {
+                        var ran = Math.floor((Math.random() * 100) + 1);
+                        var element = document.createElement('h3');
+                        var node = document.createTextNode("Current number is: " + ran);
+                        if (x == ran) {
+                            document.getElementById("#").innerHTML = ("Computer wins");
+                            cond = true;
+                            break;
+                        }
+                        else {
+                            element.appendChild(node);
+                            document.getElementById("#").appendChild(element);
+                        }
+                        count++;
+                    }
+                    if (!cond) {
+                        document.getElementById("#2").innerHTML = ("Computer Loses");
+                    }
+                }
+            </script>
+    </body>
+
+    </html>
+</body>
